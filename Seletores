@@ -1,0 +1,63 @@
+<!-- João Victor de Jesus Augusto -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Elementos</title>
+    <style>
+        .estiloLista {
+            color: blue;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .novaClasse {
+            color: red;
+            font-style: italic;
+        }
+
+        #botaoAlterado {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titulo">Título Original</h1>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <p>JavaScript® (às vezes abreviado para JS) é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web, mas usada também em vários outros ambientes sem browser, tais como node.js, Apache CouchDB e Adobe Acrobat.</p>
+    <p>O JavaScript é uma linguagem baseada em protótipos, multi-paradigma e dinâmica, suportando estilos de orientação a objetos, imperativos e declarativos (como por exemplo a programação funcional).</p>
+    <p>Não se deve confundir o JavaScript com a linguagem de programação Java. Tanto Java quanto JavaScript são marcas registradas da Oracle nos Estados Unidos da América e em outros países. No entanto, as duas linguagens de programação possuem sintaxe, semânticas e usos muito diferentes.</p>
+
+    <button id="botao">Clique aqui</button>
+
+    <script>
+        // Manipulação do título por Javascript
+        document.getElementById("titulo").innerText = "Novo Título";
+
+        // Alterar o estilo dos itens da lista por Javascript
+        let itensLista = document.querySelectorAll("ul li");
+        itensLista.forEach(item => {
+            item.classList.add("estiloLista");
+        });
+
+        // Adicionar uma classe a todos os parágrafos por Javascript
+        let paragrafos = document.querySelectorAll("p");
+        paragrafos.forEach(p => {
+            p.classList.add("novaClasse");
+        });
+
+        // Alterar o texto do botão por Javascript
+        document.getElementById("botao").innerText = "Botão Alterado!";
+    </script>
+
+</body>
+</html>
